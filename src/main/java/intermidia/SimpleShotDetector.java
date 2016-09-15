@@ -37,7 +37,7 @@ public class SimpleShotDetector
 		shotWriter.close();
 		//keyframeWriter.close();
 
-		System.out.println("Successful execution.");
+		System.out.println("Successful execution, " + shotList.listSize() + " shots found.");
 	}
 
 }
