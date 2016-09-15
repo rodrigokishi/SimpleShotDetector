@@ -14,15 +14,15 @@
   <dependencies>
     <dependency>
       <groupId>org.openimaj</groupId>
-      <artifactId>audio-processing</artifactId>
-      <version>${openimaj.version}</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.openimaj</groupId>
       <artifactId>demos</artifactId>
       <version>${openimaj.version}</version>
       <scope>compile</scope>
+      <exclusions>
+      	<exclusion>
+      		<artifactId>audio-processing</artifactId>
+      		<groupId>org.openimaj</groupId>
+      	</exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.openimaj</groupId>
