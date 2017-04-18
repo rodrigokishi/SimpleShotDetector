@@ -11,6 +11,7 @@ import TVSSUtils.ShotSegmentator;
 
 public class SimpleShotDetector
 {
+	//Usage <in: video> <out: shot segmentation> 
 	public static void main(String[] args) throws Exception
 	{	
 		XuggleVideo source = new XuggleVideo(new File(args[0]));
@@ -27,8 +28,8 @@ public class SimpleShotDetector
 		{
 			/*Write a shot on the shot segmentation file.*/
 			Shot shot = shotList.getShot(i);				
-			shotWriter.write(String.valueOf(shot.getStartBoundary().getTimecode().getFrameNumber()) + "\t" +
-							 String.valueOf(shot.getEndBoundary().getTimecode().getFrameNumber()) + "\n");
+			shotWriter.write(String.valueOf(shot.getStartBoundary()) + "\t" +
+							 String.valueOf(shot.getEndBoundary()) + "\n");
 			/*for(int j = 0; j < shot.getKeyFrameList().size(); j++)
 			{
 				keyframeWriter.write((i + 1) + "\t" + String.valueOf(shot.getKeyFrameList().get(j).getTimecode().getFrameNumber()) + "\n");
